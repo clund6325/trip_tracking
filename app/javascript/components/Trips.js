@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Trips = ({}) => {
+const Trips = ({ trips, user }) => {
+  const {name} = trips
   return(
     <>
-      <p>Trips</p>
+      <h1>Places to visit</h1>
+      <a></a>
     </>
   )
 }
