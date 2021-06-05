@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -13,9 +12,10 @@
   )
 end
 
-5.times do
-  trip = Trip.create(
-    name: Faker::Address.country
+5.times do |i|
+  trip = User.trip.create(
+    name: Faker::Address.country,
+    user_id: i
   )
 end
 5.times do
@@ -23,6 +23,7 @@ end
     loc_name: Faker::Nation.capital_city
   )
 end
+
 5.times do
   address = Address.create(
     street: Faker::Address.street_address,
@@ -32,19 +33,6 @@ end
     region: Faker::Address.time_zone,
     zip: Faker::Address.zip
   )
-=======
-5.times do 
-  User.create(
-    email: Faker::Coffee.blend_name,
-    password: Faker::Barcode.ean
-  )
-
-  3.times do
-    Trip.create(
-      name: Faker::FunnyName.name
-    )
-  end
->>>>>>> f5aac76 (Added controllers and components)
 end
 
 puts 'Data Seeded'
